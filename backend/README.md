@@ -1,29 +1,24 @@
-# History Map VN 
+# History Map API (Backend)
 
-Dự án mẫu đầy đủ: **Backend (Node.js + PostgreSQL/PostGIS)** + **Frontend (Vite + React)**.
+### 1) Cấu hình
+- Cài PostgreSQL + PostGIS và pgAdmin 4.
+- Tạo database `history_map`.
+- Trong pgAdmin, chạy lần lượt:
+  - `sql/schema.sql`
+  - `sql/sample_data.sql`
+- Tạo file `.env` từ `.env.example` và chỉnh `DATABASE_URL` cho đúng mật khẩu.
 
-## 1) Cài đặt CSDL bằng pgAdmin 4
-- Tạo database `history_map` (UTF8).
-- Mở Query Tool, chạy:
-  - `backend/sql/schema.sql`
-  - `backend/sql/sample_data.sql`
-
-## 2) Chạy Backend
+### 2) Chạy API
 ```bash
-cd backend
-cp .env.example .env   # sửa DATABASE_URL cho đúng mật khẩu
 npm install
-npm run start
+npm run start  # hoặc: npm run dev (cần nodemon)
 ```
-Kiểm tra: `http://localhost:4000/places`
+API chạy tại `http://localhost:4000`:
+- `GET /` → health check
+- `GET /places` → trả GeoJSON FeatureCollection 
+- `GET /places/:id` → chi tiết điểm + media + events
+- `GET /search?q=...` → tìm kiếm
 
-## 3) Chạy Frontend
-```bash
-cd ../frontend
-cp .env.example .env   # điền VITE_MAPBOX_TOKEN và VITE_API
-npm install
-npm run dev
-```
-Mở: `http://localhost:5173`
-
-
+### 3) Gợi ý bảo mật
+- Khi deploy, thêm CORS whitelist theo domain frontend.
+- Không commit `.env`.
