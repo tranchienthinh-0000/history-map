@@ -23,7 +23,7 @@
 <h1>🏗️ HỆ THỐNG</h1>
 
 <p align="center">
-  <img src="img/123.jpg" alt="Sơ đồ kiến trúc" width="800"/>
+  <img src="img/123.jpg" alt="Sơ đồ kiến trúc" width="600"/>
 </p>
 
 **Luồng tổng quát:**
