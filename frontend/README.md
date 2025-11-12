@@ -2,7 +2,7 @@
 
 ### 1) Cấu hình
 - Tạo file `.env` từ `.env.example` và điền:
-  - `VITE_MAPBOX_TOKEN`: token của bạn từ Mapbox
+ 
   - `VITE_API=http://localhost:4000` (hoặc URL API khi deploy)
 
 ### 2) Chạy web
