@@ -2,7 +2,7 @@
 
 <div align="center">
   <p align="center">
-    <img src="img/DAI NAM.jpg" alt="DaiNam University Logo" width="500"/>
+    <img src="img/DAINAM.png" alt="DaiNam University Logo" width="500"/>
   </p>
 </div>
 
