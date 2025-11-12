@@ -1,0 +1,9 @@
+import mapIcon from "../assets/icons/map.svg";
+
+function MapButton() {
+  return (
+    <button className="map-btn">
+      <img src={mapIcon} alt="Map" width={18} /> Mở bản đồ
+    </button>
+  );
+}

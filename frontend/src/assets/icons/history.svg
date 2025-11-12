@@ -1,0 +1,10 @@
+import historyIcon from "../assets/icons/history.svg";
+
+function Header() {
+  return (
+    <div className="header">
+      <img src={historyIcon} alt="History" width={20} height={20} />
+      <h2>Hệ thống địa điểm lịch sử</h2>
+    </div>
+  );
+}

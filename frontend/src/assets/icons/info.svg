@@ -1,0 +1,13 @@
+import infoIcon from "../assets/icons/info.svg";
+
+function PlacePopup({ place }) {
+  return (
+    <div className="popup">
+      <h3>{place.name_vi}</h3>
+      <p>{place.summary}</p>
+      <a href={place.wikipedia_url} target="_blank">
+        <img src={infoIcon} alt="Info" width={16} /> Tìm hiểu thêm
+      </a>
+    </div>
+  );
+}
